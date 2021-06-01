@@ -17,10 +17,11 @@ export default () => {
             setResults(response.data.businesses);
         }
         catch (err) {
-            setError('something went wrong');
+            console.log(err);
+            setError(err.errorMessage);
         }
     };
 
-    useEffect(() => {searchApi('pasta')}, []);
+    useEffect(() => {searchApi('pizza')}, []);
     return [searchApi, results, errorMessage]
 };

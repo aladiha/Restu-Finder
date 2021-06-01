@@ -24,6 +24,7 @@ const ResultsList = ({title, results, navigation}) => {
         }}
         horizontal
         showsHorizontalScrollIndicator={false}
+        disableVirtualization={true}
         />
     </View>
 };
